@@ -16,6 +16,8 @@ read -s -p "Postgres user password: " password
 export POSTGRES_USER=$name
 export POSTGRES_PASSWORD=$password
 
+sudo setenforce 0
+
 sudo docker rm --force postgres || true
 
 echo "Creating database container (and seed 'sample' database)"
