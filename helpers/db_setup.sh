@@ -31,6 +31,8 @@ export POSTGRES_USER=$name
 export POSTGRES_PASSWORD=$password
 export DB_NAME="sample"
 
+sudo setenforce 0
+
 sudo docker rm --force postgres || true
 
 echo "Creating database container (and seed 'sample' database)"
